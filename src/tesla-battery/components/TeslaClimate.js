@@ -14,7 +14,7 @@ export class TeslaClimate extends Component {
     const {focused} = this.state
     return (
       <div>
-        <label className={`tesla-climate__item ${value > 10 ? 'tesla-heat ' : ' '}${value ? 'tesla-climate__item--active ': ' '}${focused === value ? 'tesla-climate__item--focused': ''}`}>
+        <label className={`tesla-climate__item ${!limit ? 'tesla-heat ' : ' '}${value ? 'tesla-climate__item--active ': ' '}${focused === value ? 'tesla-climate__item--focused': ''}`}>
           <p className="heat">{limit ? 'ac' : 'heat'} {value ? 'on' : 'off'}</p>
           <i className="tesla-climate__icon"/>
           <input type="checkbox"
